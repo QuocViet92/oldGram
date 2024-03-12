@@ -35,7 +35,6 @@ const mypost = document.getElementById('renderPost')
 
 function renderPost(data){
   for(let i of data){
-      console.log(i)
       mypost.innerHTML +=
       `<section>
       <div class="name">
@@ -63,8 +62,6 @@ function renderPost(data){
       </footer>
       <section>
       `
-     
-    
   }
   
   const likeIcons = document.querySelectorAll('.like-icon');
@@ -72,15 +69,9 @@ function renderPost(data){
       icon.addEventListener('dblclick', function() {
           const postId = icon.getAttribute('data-id');
           console.log(postId)
-          document.getElementById(postId).classList.add('colorRed')
-
-          
+          document.getElementById(postId).classList.add('colorRed')    
       });
   });
   
 }
-
 renderPost(posts)
-// function clickLike(id){
-
-// }
